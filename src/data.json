@@ -1,0 +1,76 @@
+[
+    {
+      "name": "John Doe",
+      "notes": [
+        {
+          "heading": "Work Update",
+          "type": "Important",
+          "content": "Complete the client report by EOD.",
+          "creationDate": "2024-11-20"
+        },
+        {
+          "heading": "Shopping List",
+          "type": "Personal",
+          "content": "Buy groceries for the week.",
+          "creationDate": "2024-11-18"
+        }
+      ]
+    },
+    {
+      "name": "Jane Smith",
+      "notes": [
+        {
+          "heading": "Meeting Notes",
+          "type": "General",
+          "content": "Discuss project timelines with the team.",
+          "creationDate": "2024-11-19"
+        }
+      ]
+    },
+    {
+      "name": "Alice Johnson",
+      "notes": [
+        {
+          "heading": "Workout Plan",
+          "type": "Personal",
+          "content": "Plan a 30-minute cardio routine.",
+          "creationDate": "2024-11-21"
+        },
+        {
+          "heading": "Budget Planning",
+          "type": "Important",
+          "content": "Review monthly expenses and savings.",
+          "creationDate": "2024-11-15"
+        }
+      ]
+    },
+    {
+      "name": "Bob Brown",
+      "notes": [
+        {
+          "heading": "Daily Tasks",
+          "type": "General",
+          "content": "Organize files in the shared drive.",
+          "creationDate": "2024-11-20"
+        }
+      ]
+    },
+    {
+      "name": "Emily Davis",
+      "notes": [
+        {
+          "heading": "Book Ideas",
+          "type": "Personal",
+          "content": "Draft ideas for the next novel.",
+          "creationDate": "2024-11-18"
+        },
+        {
+          "heading": "Trip Planning",
+          "type": "Important",
+          "content": "Plan itinerary for the holiday vacation.",
+          "creationDate": "2024-11-16"
+        }
+      ]
+    }
+  ]
+  

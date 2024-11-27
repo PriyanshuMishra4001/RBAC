@@ -1,0 +1,363 @@
+/* UserActionsPopup.css
+.user-actions-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 600px;
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .user-actions-popup h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .user-actions-popup h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .user-actions-popup .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .user-actions-popup button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .change-name {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: #fff;
+  }
+  
+  .delete-user {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    color: #fff;
+  }
+  
+  .add-note, .edit-note-dialog {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .add-note-btn, .save-btn {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .edit-btn, .delete-note-btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .delete-note-btn {
+    background: #e53935;
+    color: #fff;
+  }
+   */
+
+.user-actions-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  width: 70%;
+  max-width: 700px;
+  height: 70%;
+  max-height: 700px;
+  z-index: 1000;
+  font-family: "Roboto", sans-serif;
+  overflow-y: auto;
+  pointer-events: auto; /* Ensure no interference */
+}
+
+body {
+  overflow: hidden; /* Prevent body scrolling when popup is open */
+
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.user-actions-popup {
+  overflow-x: hidden; /* Prevent horizontal scroll in popup */
+}
+.user-actions-popup input,
+.user-actions-popup select,
+.user-actions-popup textarea {
+  width: 100%; /* Full width of the parent container */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  padding: 10px; /* Add padding for consistency */
+  margin-bottom: 10px; /* Add space between fields */
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.add-note input,
+.add-note select,
+.add-note textarea {
+  width: calc(100% - 20px); /* Matches the content box width */
+}
+.user-actions-popup h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #333333;
+}
+
+.user-actions-popup h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #444444;
+}
+
+.user-actions-popup .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 auto;
+}
+
+.user-actions-popup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-actions-popup button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.change-name {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #ffffff;
+}
+
+.delete-user {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  color: #ffffff;
+}
+
+.add-note,
+.edit-note-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-note-btn,
+.save-btn {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #ffffff;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #e0e0e0;
+  border: 1px solid #cccccc;
+  color: #333333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+table th {
+  background-color: #f1f1f1;
+  color: #444444;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+.table-actions {
+  display: flex;
+  gap: 10px; /* Space between edit and delete buttons */
+}
+
+.edit-btn,
+.delete-note-btn {
+  padding: 6px 12px;
+  margin: 3px 6px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  background: #007bff;
+  color: #ffffff;
+}
+
+.edit-btn:hover {
+  background: #0056b3;
+}
+
+.delete-note-btn {
+  background: #e53935;
+  color: #ffffff;
+}
+
+.delete-note-btn:hover {
+  background: #b71c1c;
+}
+
+.edit-btn:hover,
+.delete-note-btn:hover {
+  /* Ensure hover effects apply only to buttons */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.edit-btn:hover,
+.delete-note-btn:hover {
+  background-color: #f0f0f0; /* Subtle hover effect */
+  transform: scale(1.05); /* Slight enlargement */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.name-dialog,
+.edit-note-dialog {
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  position: relative;
+}
+
+.name-dialog h3,
+.edit-note-dialog h3 {
+  margin: 0 0 10px 0;
+}
+
+.name-dialog input,
+.edit-note-dialog input,
+.edit-note-dialog textarea,
+.add-note input,
+.add-note textarea,
+.add-note select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.close-btn {
+  position: absolute; /* Place close button at the top-right */
+  top: 15px;
+  right: 15px;
+  background: #f44336;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .user-actions-popup {
+    width: 90%; /* Adjust for smaller screens */
+    height: 90%; /* Adjust for smaller screens */
+    padding: 20px;
+  }
+
+  .add-note {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

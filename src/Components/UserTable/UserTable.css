@@ -1,0 +1,155 @@
+/* .user-table-container {
+    overflow-x: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table-header {
+    padding: 12px 8px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, #1d3cba, #0066cc);
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .user-table-row {
+
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .user-table-cell {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .user-table-row:nth-child(even) {
+    background-color: #fff;
+  }
+  
+  .user-table-button {
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #28a745, #218838);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .pagination-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-button.active {
+    background-color: #007bff;
+  }
+   */
+.user-table-container {
+  overflow: hidden;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Change to fixed to better control column widths */
+}
+
+.user-table-header {
+  padding: 12px 8px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(90deg, #1d3cba, #0066cc);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.user-table-body {
+  display: block;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.user-table-scrollbar {
+  max-height: 400px; /* Set maximum height for scrollable rows */
+  overflow-y: auto; /* Add vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.user-table-row {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.user-table-row:nth-child(even) {
+  background-color: #fff;
+}
+
+.user-table-cell {
+  text-align: center;
+  padding: 12px 8px;
+  font-size: 14px;
+  overflow: hidden; /* Prevent overflow of content */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent text wrapping */
+  display: table-cell; /* Ensure cells behave like table cells */
+}
+
+.user-table-cell:last-child {
+  text-align: center; /* Center-align the "Actions" column */
+}
+
+.user-table-button {
+  padding: 8px 12px;
+  background: linear-gradient(90deg, #28a745, #218838);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.user-table-button:hover {
+  background: #1e7e34; /* Add hover effect for better UX */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
