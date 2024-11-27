@@ -1,8 +1,8 @@
 .navbar {
-  position: fixed; /* Makes the navbar stick to the top */
-  top: 0; /* Aligns it to the top of the viewport */
-  left: 0; /* Ensures it stretches to the left edge */
-  width: 100%; /* Makes it span the full width of the viewport */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
   background: linear-gradient(90deg, #404bc8, #194bdf);
   padding: 20px 40px;
   display: flex;
@@ -10,7 +10,7 @@
   align-items: center;
   color: #fefeff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensures the navbar stays above other content */
+  z-index: 1000;
 }
 
 .navbar-title {
@@ -21,7 +21,6 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Add margin-top to the body content to prevent overlapping */
 body {
-  margin-top: 100px; /* Adjust this value based on the height of the navbar */
+  margin-top: 100px; 
 }
